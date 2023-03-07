@@ -1,0 +1,451 @@
+{
+  "id": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+  "title": "Sprint planner planning sprints",
+  "duration": null,
+  "sprintDuration": 2,
+  "sprintCapacity": 8,
+  "created_at": "2023-02-17T09:10:11.989Z",
+  "updated_at": "2023-02-17T09:10:11.989Z",
+  "stories": [
+    {
+      "id": 0,
+      "title": "As a user I want to be able to create a sprint",
+      "description": "A sprint is a period of time during which a set of stories are worked on",
+      "storyPoints": 3,
+      "dependencies": [],
+      "preAssignedDeveloperId": 0,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.000Z",
+      "updated_at": "2023-02-17T09:10:12.000Z"
+    },
+    {
+      "id": 1,
+      "title": "Kuchh naya likh copilot",
+      "description": "A sprint is a period of time during which a set of stories are worked on",
+      "storyPoints": 4,
+      "dependencies": [3, 4],
+      "preAssignedDeveloperId": 2,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.000Z",
+      "updated_at": "2023-02-17T09:10:12.000Z"
+    },
+    {
+      "id": 2,
+      "title": "As be able to create a sprint",
+      "description": "A sprint is a period of time during which a set of stories are worked on",
+      "storyPoints": 5,
+      "dependencies": [],
+      "preAssignedDeveloperId": null,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.000Z",
+      "updated_at": "2023-02-17T09:10:12.000Z"
+    },
+    {
+      "id": 3,
+      "title": "As a user I want to be able to e a sprint",
+      "description": "A sprint is a period of time during which a set of stories are worked on",
+      "storyPoints": 1,
+      "dependencies": [0, 2],
+      "preAssignedDeveloperId": null,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.000Z",
+      "updated_at": "2023-02-17T09:10:12.000Z"
+    },
+    {
+      "id": 4,
+      "title": " user I want to be able to create a sprint",
+      "description": "A sprint is a period of time during which a set of stories are worked on",
+      "storyPoints": 2,
+      "dependencies": [0],
+      "preAssignedDeveloperId": null,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.000Z",
+      "updated_at": "2023-02-17T09:10:12.000Z"
+    },
+    {
+      "id": 5,
+      "title": "a user I want to be able to create a sprint",
+      "description": "A sprint is a period of time during which a set of stories are worked on",
+      "storyPoints": 10,
+      "dependencies": [6],
+      "preAssignedDeveloperId": null,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.000Z",
+      "updated_at": "2023-02-17T09:10:12.000Z"
+    },
+    {
+      "id": 6,
+      "title": "As a user I want to be able to create a ",
+      "description": "A sprint is a period of time during which a set of stories are worked on",
+      "storyPoints": 12,
+      "dependencies": [0, 3, 7],
+      "preAssignedDeveloperId": null,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.000Z",
+      "updated_at": "2023-02-17T09:10:12.000Z"
+    },
+    {
+      "id": 7,
+      "title": " sprint",
+      "description": "A sprint is a period of time during which a set of stories are worked on",
+      "storyPoints": 8,
+      "dependencies": [2, 3],
+      "preAssignedDeveloperId": null,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.000Z",
+      "updated_at": "2023-02-17T09:10:12.000Z"
+    }
+  ],
+  "developers": [
+    {
+      "id": 0,
+      "name": "John",
+      "capacity": 100,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.014Z",
+      "updated_at": "2023-02-17T09:10:12.014Z"
+    },
+    {
+      "id": 1,
+      "name": "Leah",
+      "capacity": 100,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.014Z",
+      "updated_at": "2023-02-17T09:10:12.014Z"
+    },
+    {
+      "id": 2,
+      "name": "Lana",
+      "capacity": 120,
+      "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+      "created_at": "2023-02-17T09:10:12.014Z",
+      "updated_at": "2023-02-17T09:10:12.014Z"
+    }
+  ],
+  "sprints": [
+    [
+      {
+        "id": 0,
+        "title": "As a user I want to be able to create a sprint",
+        "description": "A sprint is a period of time during which a set of stories are worked on",
+        "storyPoints": 3,
+        "dependencies": [],
+        "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+        "created_at": "2023-02-17T09:10:12.000Z",
+        "updated_at": "2023-02-17T09:10:12.000Z",
+        "assignedDeveloperId": 0,
+        "startDay": 0,
+        "endDay": 2,
+        "remainingDuration": -1,
+        "developers": [
+          {
+            "id": 0,
+            "name": "John",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 1,
+            "name": "Leah",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "As be able to create a sprint",
+        "description": "A sprint is a period of time during which a set of stories are worked on",
+        "storyPoints": 5,
+        "dependencies": [],
+        "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+        "created_at": "2023-02-17T09:10:12.000Z",
+        "updated_at": "2023-02-17T09:10:12.000Z",
+        "assignedDeveloperId": 2,
+        "startDay": 0,
+        "endDay": 4,
+        "remainingDuration": -1,
+        "developers": [
+          {
+            "id": 2,
+            "name": "Lana",
+            "capacity": 120,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 1,
+            "name": "Leah",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": " user I want to be able to create a sprint",
+        "description": "A sprint is a period of time during which a set of stories are worked on",
+        "storyPoints": 2,
+        "dependencies": [0],
+        "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+        "created_at": "2023-02-17T09:10:12.000Z",
+        "updated_at": "2023-02-17T09:10:12.000Z",
+        "assignedDeveloperId": 0,
+        "startDay": 2,
+        "endDay": 4,
+        "remainingDuration": 0,
+        "developers": [
+          {
+            "id": 0,
+            "name": "John",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "As a user I want to be able to e a sprint",
+        "description": "A sprint is a period of time during which a set of stories are worked on",
+        "storyPoints": 1,
+        "dependencies": [0, 2],
+        "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+        "created_at": "2023-02-17T09:10:12.000Z",
+        "updated_at": "2023-02-17T09:10:12.000Z",
+        "assignedDeveloperId": 2,
+        "startDay": 4,
+        "endDay": 5,
+        "remainingDuration": -2,
+        "developers": [
+          {
+            "id": 2,
+            "name": "Lana",
+            "capacity": 120,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 1,
+            "name": "Leah",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 0,
+            "name": "John",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "title": "Kuchh naya likh copilot",
+        "description": "A sprint is a period of time during which a set of stories are worked on",
+        "storyPoints": 4,
+        "dependencies": [3, 4],
+        "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+        "created_at": "2023-02-17T09:10:12.000Z",
+        "updated_at": "2023-02-17T09:10:12.000Z",
+        "assignedDeveloperId": 2,
+        "startDay": 5,
+        "endDay": 15,
+        "remainingDuration": 0,
+        "developers": [
+          {
+            "id": 2,
+            "name": "Lana",
+            "capacity": 120,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 0,
+            "name": "John",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": " sprint",
+        "description": "A sprint is a period of time during which a set of stories are worked on",
+        "storyPoints": 8,
+        "dependencies": [2, 3],
+        "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+        "created_at": "2023-02-17T09:10:12.000Z",
+        "updated_at": "2023-02-17T09:10:12.000Z",
+        "assignedDeveloperId": 1,
+        "startDay": 5,
+        "endDay": 9,
+        "remainingDuration": 0,
+        "developers": [
+          {
+            "id": 1,
+            "name": "Leah",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 2,
+            "name": "Lana",
+            "capacity": 120,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 0,
+            "name": "John",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "As a user I want to be able to create a ",
+        "description": "A sprint is a period of time during which a set of stories are worked on",
+        "storyPoints": 12,
+        "dependencies": [0, 3, 7],
+        "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+        "created_at": "2023-02-17T09:10:12.000Z",
+        "updated_at": "2023-02-17T09:10:12.000Z",
+        "assignedDeveloperId": 1,
+        "startDay": 9,
+        "endDay": 13,
+        "remainingDuration": 0,
+        "developers": [
+          {
+            "id": 1,
+            "name": "Leah",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 2,
+            "name": "Lana",
+            "capacity": 120,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 0,
+            "name": "John",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "a user I want to be able to create a sprint",
+        "description": "A sprint is a period of time during which a set of stories are worked on",
+        "storyPoints": 10,
+        "dependencies": [6],
+        "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+        "created_at": "2023-02-17T09:10:12.000Z",
+        "updated_at": "2023-02-17T09:10:12.000Z",
+        "assignedDeveloperId": 1,
+        "startDay": 13,
+        "endDay": 17,
+        "remainingDuration": -2,
+        "developers": [
+          {
+            "id": 1,
+            "name": "Leah",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 2,
+            "name": "Lana",
+            "capacity": 120,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 0,
+            "name": "John",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": 5,
+        "title": "a user I want to be able to create a sprint",
+        "description": "A sprint is a period of time during which a set of stories are worked on",
+        "storyPoints": 10,
+        "dependencies": [6],
+        "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+        "created_at": "2023-02-17T09:10:12.000Z",
+        "updated_at": "2023-02-17T09:10:12.000Z",
+        "assignedDeveloperId": 1,
+        "startDay": 13,
+        "endDay": 17,
+        "remainingDuration": -2,
+        "developers": [
+          {
+            "id": 1,
+            "name": "Leah",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 2,
+            "name": "Lana",
+            "capacity": 120,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          },
+          {
+            "id": 0,
+            "name": "John",
+            "capacity": 100,
+            "projectId": "70429f36-5bef-48f4-aabc-1d2ecdaca834",
+            "created_at": "2023-02-17T09:10:12.014Z",
+            "updated_at": "2023-02-17T09:10:12.014Z"
+          }
+        ]
+      }
+    ]
+  ]
+}
