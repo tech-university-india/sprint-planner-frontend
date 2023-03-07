@@ -4,7 +4,7 @@ import './style.css';
 const Navbar = () => {
   return (
     <footer className="footer">
-      <span>Made with ❤️ by Pranav</span>
+      <span>Made with ❤️</span>
     </footer>
   );
 };
