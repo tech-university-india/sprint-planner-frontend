@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Navbar, Footer } from './Components';
 import GlobalContextProvider from './Contexts';
-import { ErrorScreen, Home } from './Pages';
+import { ErrorScreen, Home, GanttChart } from './Pages';
 
 function App() {
   return (
@@ -13,6 +13,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/:projectId" element={<Home />} />
+            <Route path="/:projectId/gantt" element={<GanttChart />} />
             <Route path="error/:errorCode?" element={<ErrorScreen />} />
           </Routes>
         </Router>
