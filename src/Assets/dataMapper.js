@@ -1,6 +1,7 @@
 import * as response from './sampleData.json';
 const { sprints, title: projectTitle } = response;
-const projectStartDate = Date.now();
+const tempDate = new Date('2021-01-04');
+const projectStartDate = tempDate.getTime();
 // import { v4 } from 'uuid';
 
 const getGanttChartFormatData = () => {
@@ -20,7 +21,7 @@ const getGanttChartFormatData = () => {
       let { id, dependencies, developers, title, startDay, endDay } = story;
       let storyToAdd = {
         id: id.toString(),
-        dependencies: dependencies.map((id) => id.toString()),
+        dependency: dependencies.map((id) => id.toString()),
         developer: developers[0].name,
         name: title,
         start: projectStartDate + startDay * 60 * 60 * 24 * 1000,
@@ -35,6 +36,7 @@ const getGanttChartFormatData = () => {
     title: {
       text: projectTitle,
     },
+    colors: ['#2f7ed8', '#0d233a', '#8bbc21'],
     series: [
       {
         name: projectTitle,
