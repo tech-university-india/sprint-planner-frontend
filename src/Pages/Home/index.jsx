@@ -1,12 +1,15 @@
 import React from 'react';
-import './style.css';
 
-const Home = () => {
+import { Topbar, Title, InputForm } from '../../Components';
+
+function Home() {
   return (
-    <div className="home">
-      <h1>Home</h1>
-    </div>
+    <>
+      <Topbar />
+      <Title />
+      <InputForm />
+    </>
   );
-};
+}
 
 export default Home;

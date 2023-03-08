@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Navbar, Footer } from './Components';
+// import { Navbar, Footer } from './Components';
 import GlobalContextProvider from './Contexts';
 import { ErrorScreen, Home } from './Pages';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <GlobalContextProvider>
         <Router>
           <Routes>
@@ -17,7 +17,7 @@ function App() {
           </Routes>
         </Router>
       </GlobalContextProvider>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

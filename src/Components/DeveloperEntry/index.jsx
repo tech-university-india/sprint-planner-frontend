@@ -1,11 +1,11 @@
-import { Box, Tooltip, IconButton } from '@mui/material'
-import DeleteIcon from '@mui/icons-material/Delete'
-import PropTypes from 'prop-types'
-import React from 'react'
-import './DeveloperEntry.css'
+import { Box, Tooltip, IconButton } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import PropTypes from 'prop-types';
+import React from 'react';
+import './DeveloperEntry.css';
 
 function Item(props) {
-  const { sx, ...other } = props
+  const { sx, ...other } = props;
   return (
     <Box
       sx={{
@@ -27,21 +27,27 @@ function Item(props) {
       }}
       {...other}
     />
-  )
+  );
 }
 
 Item.propTypes = {
   sx: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])),
+    PropTypes.arrayOf(
+      PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool]),
+    ),
     PropTypes.func,
     PropTypes.object,
   ]),
-}
+};
 
-export default function DeveloperEntry({ developerInfo, removeItem, deleteCheck }) {
-  const { id, developer, sprintCapacity, capacity } = developerInfo
+export default function DeveloperEntry({
+  developerInfo,
+  removeItem,
+  deleteCheck,
+}) {
+  const { id, developer, sprintCapacity, capacity } = developerInfo;
   return (
-    <div className='list-item'>
+    <div className="list-item">
       <Box
         sx={{
           display: 'grid',
@@ -61,13 +67,13 @@ export default function DeveloperEntry({ developerInfo, removeItem, deleteCheck 
         <Item sx={{ width: '90%' }}>{capacity}</Item>
         {/* <Button onClick={() => removeItem(index)}>==</Button> */}
         {deleteCheck(id) ? (
-          <Tooltip title='Delete'>
-            <IconButton color='primary' onClick={() => removeItem(id)}>
+          <Tooltip title="Delete">
+            <IconButton color="primary" onClick={() => removeItem(id)}>
               <DeleteIcon />
             </IconButton>
           </Tooltip>
         ) : (
-          <Tooltip title='Remove or Edit Developer Id in the Stories Input form'>
+          <Tooltip title="Remove or Edit Developer Id in the Stories Input form">
             <IconButton disableTouchRipple disableFocusRipple>
               <DeleteIcon style={{ color: 'red' }} />
             </IconButton>
@@ -75,7 +81,7 @@ export default function DeveloperEntry({ developerInfo, removeItem, deleteCheck 
         )}
       </Box>
     </div>
-  )
+  );
 }
 
 DeveloperEntry.propTypes = {
@@ -84,4 +90,4 @@ DeveloperEntry.propTypes = {
   developerInfo: PropTypes.object,
   removeItem: PropTypes.func,
   deleteCheck: PropTypes.func,
-}
+};
