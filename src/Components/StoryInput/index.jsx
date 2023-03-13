@@ -1,6 +1,7 @@
 import { Button, Box, Input, Fab } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import './StoryInput.css';
@@ -40,6 +41,7 @@ Item.propTypes = {
 };
 
 export default function StoryInput({ storyList, setStoryList }) {
+  const [id, setId] = useState(storyList.length + 1);
   const [stories, setStories] = useState('');
   const [dependencies, setDependencies] = useState([]);
   const [developer, setDeveloper] = useState([]);
@@ -50,18 +52,16 @@ export default function StoryInput({ storyList, setStoryList }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (stories && storyPoints) {
-      const newStory = { stories, dependencies, developer, storyPoints };
+    console.log(storyList);
+    if (id && stories && storyPoints) {
+      const newStory = { id, stories, dependencies, developer, storyPoints };
       const myArray = newStory.dependencies.split(',');
       const myNewArray = myArray.map((item) => {
         return parseInt(item);
       });
-      // console.log(myNewArray)
-      // console.log(typeof myNewArray)
       newStory.dependencies = myNewArray;
-      setStoryList((storyList) => {
-        return [...storyList, newStory];
-      });
+      setStoryList([...storyList, newStory]);
+      setId(id + 1);
     }
   };
   return (
@@ -72,15 +72,16 @@ export default function StoryInput({ storyList, setStoryList }) {
             <Box
               sx={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(4, 2fr) 1fr 1fr',
+                gridTemplateColumns: '1fr repeat(4, 2fr) 1fr 1fr',
                 ml: 6,
                 p: 1,
               }}
             >
-              <Item>Stories</Item>
-              <Item>Dependencies</Item>
-              <Item>Developer</Item>
-              <Item>Story Points</Item>
+              <Item sx={{ width: '70%' }}>Id</Item>
+              <Item sx={{ width: '70%' }}>Stories</Item>
+              <Item sx={{ width: '70%' }}>Dependencies</Item>
+              <Item sx={{ width: '70%' }}>Developer</Item>
+              <Item sx={{ width: '70%' }}>Story Points</Item>
             </Box>
             <div className="story-list">
               {storyList.length === 0 ? (
@@ -94,7 +95,7 @@ export default function StoryInput({ storyList, setStoryList }) {
                       <Box
                         sx={{
                           display: 'grid',
-                          gridTemplateColumns: 'repeat(4, 2fr) 1fr 1fr',
+                          gridTemplateColumns: '1fr repeat(4, 2fr) 1fr 1fr',
                           backgroundColor: 'white',
                           borderRadius: '10px',
                           ml: 6,
@@ -102,10 +103,13 @@ export default function StoryInput({ storyList, setStoryList }) {
                           p: 1,
                         }}
                       >
-                        <Item>{stories}</Item>
-                        <Item>{dependencies.toString()}</Item>
-                        <Item>{developer}</Item>
-                        <Item>{storyPoints}</Item>
+                        <Item sx={{ width: '70%' }}>{id}</Item>
+                        <Item sx={{ width: '70%' }}>{stories}</Item>
+                        <Item sx={{ width: '70%' }}>
+                          {dependencies.toString()}
+                        </Item>
+                        <Item sx={{ width: '70%' }}>{developer}</Item>
+                        <Item sx={{ width: '70%' }}>{storyPoints}</Item>
                         <Fab
                           color="primary"
                           onClick={() => removeItem(id)}
@@ -124,27 +128,33 @@ export default function StoryInput({ storyList, setStoryList }) {
               )}
             </div>
           </div>
-          <form className="story-container-form" onSubmit={handleSubmit}>
+          <ValidatorForm
+            className="story-container-form"
+            onSubmit={handleSubmit}
+            onError={(errors) => console.log(errors)}
+          >
             <Box
               sx={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(4, 2fr) 1fr 1fr',
+                gridTemplateColumns: '1fr repeat(4, 2fr) 1fr 1fr',
                 ml: 6,
                 p: 1,
               }}
             >
               <Item>
-                <Input
+                <TextValidator
                   type="text"
                   name="story"
                   defaultValue="Disabled"
                   value={stories}
                   placeholder="Enter Story Title"
+                  validators={['required']}
+                  errorMessages={['this field is required']}
                   onChange={(e) => setStories(e.target.value)}
                 />
               </Item>
               <Item>
-                <Input
+                <TextValidator
                   type="text"
                   name="dependencies"
                   value={dependencies}
@@ -153,20 +163,36 @@ export default function StoryInput({ storyList, setStoryList }) {
                 />
               </Item>
               <Item>
-                <Input
+                <TextValidator
                   type="text"
                   name="developers"
                   value={developer}
                   placeholder="Enter Developer"
+                  validators={['isNumber', 'minNumber:0']}
+                  errorMessages={[
+                    'It should be number',
+                    'Number should be positive',
+                  ]}
                   onChange={(e) => setDeveloper(e.target.value)}
                 />
               </Item>
               <Item>
-                <Input
+                <TextValidator
                   type="text"
                   name="storyPoints"
                   value={storyPoints}
                   placeholder="Enter Story Points"
+                  validators={[
+                    'required',
+                    'isNumber',
+                    'minNumber:0',
+                    'maxNumber:10',
+                  ]}
+                  errorMessages={[
+                    'this field is required',
+                    'It should be number',
+                    'Number should be positive',
+                  ]}
                   onChange={(e) => setStoryPoints(e.target.value)}
                 />
               </Item>
@@ -179,7 +205,7 @@ export default function StoryInput({ storyList, setStoryList }) {
                 +
               </Fab>
             </Box>
-          </form>
+          </ValidatorForm>
         </Box>
       </div>
     </>
