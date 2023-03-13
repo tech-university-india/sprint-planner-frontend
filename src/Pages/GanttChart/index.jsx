@@ -5,7 +5,6 @@ import getGanttChartFormatData from '../../Assets/dataMapper';
 
 const GanttChart = () => {
   const data = getGanttChartFormatData();
-  console.log(data);
   const options = {
     yAxis: {
       type: 'category',
