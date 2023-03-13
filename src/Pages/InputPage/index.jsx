@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react';
 
-import Topbar from '../../components/TopBar/topbar'
-import Title from '../../components/Title/title'
-import StoryInput from '../../Components/StoryInput'
-import DeveloperInput from '../../components/DeveloperInput/developerInput'
-import InputForm from '../../components/InputForm'
+import { Topbar, Title, InputForm } from '../../Components';
 
-export default function Home() {
+function InputPage() {
   return (
     <>
       <Topbar />
       <Title />
       <InputForm />
     </>
-  )
+  );
 }
+
+export default InputPage;
